@@ -17,6 +17,12 @@ const Footer = () => {
                     <h2 className='text-2xl font-semibold text-white mb-3'>Company</h2>
                     <ul>
                         <li>
+                            <a href="https://rik-offlinecourse.com/" target="_blank" className='hover:text-white'>Rik offline</a>
+                        </li>
+                        <li>
+                            <a href="https://rik-offlinecourse.com/blog/" target="_blank" className='hover:text-white'>Blog</a>
+                        </li>
+                        <li>
                             <a href="https://rik-offlinecourse.com/contact/" target="_blank" className='hover:text-white'>Contact</a>
                         </li>
                         <li>

@@ -29,7 +29,7 @@ const HeroSection = () => {
                         <Button leftIcon={<RiLoginBoxLine />} title={'Login'} className={"flex justify-center gap-x-2 items-center bg-gradient-to-r bg-custom-orange text-white font-medium text-sm md:text-base md:w-52 md:h-12 w-44 h-10 rounded-full md:px-2"} />
                     </div>
                 </div>
-                <div className='w-[60%] md:w-[60%]'>
+                <div className='w-[80%] md:w-[60%]'>
                     <Swiper
                         spaceBetween={30}
                         centeredSlides={true}

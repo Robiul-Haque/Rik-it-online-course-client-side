@@ -54,6 +54,7 @@ const Navbar = () => {
             </section>
             <nav className='flex justify-between items-center px-4 py-2 md:px-20 md:py-3'>
                 <img src={header_logo} alt="Header-logo" className='w-4/12 md:w-2/12' />
+                {/* large device menu */}
                 <MenuList menuItems={menuItems} className={'md:flex items-center flex-col hidden md:flex-row md:gap-x-10 font-semibold px-2'} />
                 <Button leftIcon={<IoMdBook />} title={'Snior ID'} rightIcon={<IoMdArrowDropdown className='size-5' />} className={"md:flex justify-center items-center gap-x-2 bg-custom-orange text-white hidden font-medium w-40 h-10 rounded-lg px-2"} />
                 {/* responsive menu */}
@@ -68,11 +69,12 @@ const Navbar = () => {
                                 <i onClick={() => setToogle(true)}>
                                     <IoCloseCircleOutline className='size-10' />
                                 </i>
-                                <MenuList menuItems={menuItems} className={'flex items-center flex-col gap-y-3 font-semibold p-5 rounded-lg absolute top-[150px] right-[32%] bg-slate-50'} />
+                                <MenuList menuItems={menuItems} className={'flex items-center flex-col gap-y-3 font-semibold p-5 rounded-lg z-50 absolute top-[130px] right-[33%] bg-slate-50'} />
                             </>
                     }
                 </div>
-                <Button leftIcon={<IoMdBook />} title={'COURSE DETAILS'} rightIcon={<IoMdArrowDropdown className='size-5' />} className={"flex items-center gap-x-1 bg-custom-orange text-white md:hidden font-medium p-2 text-xs rounded-lg"} />
+                {/* <Button leftIcon={<IoMdBook />} title={'COURSE DETAILS'} rightIcon={<IoMdArrowDropdown className='size-5' />} className={"flex items-center gap-x-1 bg-custom-orange text-white md:hidden font-medium p-2 text-xs rounded-lg"} /> */}
+                <Button leftIcon={<IoMdBook />} title={'Snior ID'} rightIcon={<IoMdArrowDropdown className='size-5' />} className={"md:hidden flex justify-center items-center gap-x-2 bg-custom-orange text-white font-medium w-36 h-10 rounded-lg px-2"} />
             </nav>
         </>
     )
