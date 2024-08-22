@@ -17,20 +17,24 @@ const Navbar = () => {
             path: '/',
         },
         {
+            label: 'Rik offline',
+            path: 'https://rik-offlinecourse.com/',
+        },
+        {
+            label: 'Blog',
+            path: 'https://rik-offlinecourse.com/blog/',
+        },
+        {
             label: 'About',
-            path: '/about',
+            path: 'https://rik-offlinecourse.com/about/',
+        },
+        {
+            label: 'Contact',
+            path: 'https://rik-offlinecourse.com/contact/',
         },
         {
             label: 'SUCCESS STORY',
-            path: '/success-story',
-        },
-        {
-            label: 'FREELANCING',
-            path: '/freelancing',
-        },
-        {
-            label: 'CONTACT',
-            path: '/contact',
+            path: 'https://rik-offlinecourse.com/success-story/',
         },
     ]
 
@@ -38,10 +42,6 @@ const Navbar = () => {
         <>
             <section className='bg-[#FE4C00] flex justify-between px-4 md:px-20 py-4'>
                 <div className='flex flex-col md:flex-row md:gap-10'>
-                    <i className='flex items-center'>
-                        <IoCallOutline className='mx-1' />
-                        +8801928111128
-                    </i>
                     <i className='flex items-center'>
                         <MdEmail className='mx-1.5' />
                         help@rikitinstitute.com
@@ -55,7 +55,7 @@ const Navbar = () => {
             <nav className='flex justify-between items-center px-4 py-2 md:px-20 md:py-3'>
                 <img src={header_logo} alt="Header-logo" className='w-4/12 md:w-2/12' />
                 <MenuList menuItems={menuItems} className={'md:flex items-center flex-col hidden md:flex-row md:gap-x-10 font-semibold px-2'} />
-                <Button leftIcon={<IoMdBook />} title={'COURSE DETAILS'} rightIcon={<IoMdArrowDropdown className='size-5' />} className={"md:flex justify-center items-center gap-x-2 bg-custom-orange text-white hidden font-medium w-52 h-10 rounded-lg px-2"} />
+                <Button leftIcon={<IoMdBook />} title={'Snior ID'} rightIcon={<IoMdArrowDropdown className='size-5' />} className={"md:flex justify-center items-center gap-x-2 bg-custom-orange text-white hidden font-medium w-40 h-10 rounded-lg px-2"} />
                 {/* responsive menu */}
                 <div className='block md:hidden'>
                     {

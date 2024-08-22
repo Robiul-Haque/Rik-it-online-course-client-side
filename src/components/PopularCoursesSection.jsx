@@ -40,4 +40,4 @@ const PopularCoursesSection = () => {
     )
 }
 
-export default PopularCoursesSection
+export default PopularCoursesSection;

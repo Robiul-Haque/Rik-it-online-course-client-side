@@ -3,6 +3,7 @@ import Navbar from '../shared/Navbar';
 import HeroSection from '../components/HeroSection';
 import PopularCoursesSection from '../components/PopularCoursesSection';
 import DetailSection from '../components/DetailSection';
+import Footer from '../shared/Footer';
 
 
 const HomePage = () => {
@@ -12,8 +13,11 @@ const HomePage = () => {
                 <Navbar />
                 <HeroSection />
             </header>
-            <PopularCoursesSection/>
+            <PopularCoursesSection />
             <DetailSection />
+            <footer>
+                <Footer />
+            </footer>
         </>
     )
 }

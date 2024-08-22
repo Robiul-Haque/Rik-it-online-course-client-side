@@ -5,7 +5,7 @@ import video from '../assets/video.png';
 
 const DetailSection = () => {
     return (
-        <section className='text-center bg-custom-semipink pt-16'>
+        <section className='text-center bg-custom-semipink p-16'>
             <h1 className='text-3xl font-bold mb-3 md:mx-0 mx-1'>Exclusive Solutions that Set Us Apart</h1>
             <p className='md:w-[50%] mx-auto md:px-0 px-1'>Our aim is to make your learning experience the best possible by providing you with additional facilities that will help you to grow without bounds.</p>
             <div className='flex justify-center md:gap-x-10 gap-y-10 md:flex-row flex-col mt-12'>

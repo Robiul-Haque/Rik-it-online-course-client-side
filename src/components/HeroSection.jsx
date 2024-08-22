@@ -16,21 +16,23 @@ import graphic_design from '../assets/graphic-design-icon.png';
 import web_development from '../assets/web-development-icon.png';
 import english_anguage from '../assets/english-language-icon.png';
 import microsoft_office from '../assets/microsoft-office.png';
+import { FaCashRegister } from "react-icons/fa";
+import { RiLoginBoxLine } from "react-icons/ri";
 
 const HeroSection = () => {
     return (
         <section>
-            <div className='flex items-center md:flex-row flex-col-reverse gap-x-16 md:w-[80%] mx-auto md:mt-12 mt-6'>
+            <div className='flex items-center md:flex-row flex-col-reverse gap-x-10 md:w-[80%] mx-auto md:mt-12 mt-6'>
                 <div className='w-[90%] md:w-[50%]'>
                     <h3 className='text-3xl font-semibold md:mt-0 mt-8'>Unleash Your Potential</h3>
-                    <h1 className='md:text-6xl text-5xl font-bold my-5'>Become an IT Pro & Rule the <span className='text-custom-orange'>Digital World</span></h1>
-                    <p>With a vision to turn manpower into assets, RIK IT INSTITUTE is ready to enhance your learning experience with skilled mentors and updated curriculum. Pick your desired course from more than 30 trendy options.</p>
+                    <h1 className='md:text-4xl text-5xl font-bold my-5'>Become an IT Pro & Rule the <span className='text-custom-orange'>Digital World.</span> Learn, Earn, and Succeed in Career!</h1>
+                    <p>With a vision to turn manpower into assets, RIK e-LEARNING PLATFORM & RIK IT INSTITUTE is ready to enhance your learning experience with skilled mentors and updated curriculum. Pick your desired course from more than 30 trendy options.</p>
                     <div className='flex md:justify-between justify-evenly mt-10'>
-                        <Button leftIcon={<BiBook className='md:size-5 size-4' />} title={'COURSE DETAILS'} className={"flex justify-center gap-x-2 items-center bg-custom-orange text-white font-medium text-sm md:text-base md:w-52 md:h-12 w-44 h-10 rounded-lg md:px-2"} />
-                        <Button leftIcon={<FaRegBookmark />} title={'JOIN FREE SEMINAR'} className={"flex justify-center gap-x-2 items-center bg-custom-orange text-white font-medium text-sm md:text-base md:w-52 md:h-12 w-44 h-10 rounded-lg md:px-2"} />
+                        <Button leftIcon={<FaCashRegister className='size-4' />} title={'Register'} className={"flex justify-center gap-x-2 items-center bg-custom-orange text-white font-medium text-sm md:text-base md:w-52 md:h-12 w-44 h-10 rounded-full md:px-2"} />
+                        <Button leftIcon={<RiLoginBoxLine />} title={'Login'} className={"flex justify-center gap-x-2 items-center bg-gradient-to-r bg-custom-orange text-white font-medium text-sm md:text-base md:w-52 md:h-12 w-44 h-10 rounded-full md:px-2"} />
                     </div>
                 </div>
-                <div className='w-[60%] md:w-[50%]'>
+                <div className='w-[60%] md:w-[70%]'>
                     <img src={hero_img} alt="Hero-image" className='md:border-[12px] border-[8px] border-[#FE4C00] rounded-[35px]' />
                 </div>
             </div>
