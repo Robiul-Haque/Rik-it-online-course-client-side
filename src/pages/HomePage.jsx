@@ -15,9 +15,7 @@ const HomePage = () => {
             </header>
             <PopularCoursesSection />
             <DetailSection />
-            <footer>
-                <Footer />
-            </footer>
+            <footer><Footer /></footer>
         </>
     )
 }

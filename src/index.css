@@ -6,3 +6,8 @@
 .slider-item {
     @apply w-[20%] !important;
 }
+
+
+.scrollToTop {
+    padding-left:5px !important;
+}
