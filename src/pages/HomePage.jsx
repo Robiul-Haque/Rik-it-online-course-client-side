@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../shared/Navbar';
 import HeroSection from '../components/HeroSection';
+import PopularCoursesSection from '../components/PopularCoursesSection';
 
 
 const HomePage = () => {
@@ -10,8 +11,7 @@ const HomePage = () => {
                 <Navbar />
                 <HeroSection />
             </header>
-
-            This is home page
+            <PopularCoursesSection/>
         </>
     )
 }

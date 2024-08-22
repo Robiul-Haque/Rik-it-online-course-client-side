@@ -8,7 +8,7 @@ export default {
     extend: {
       backgroundColor: {
         "custom-orange": "#FE4C00",
-        "custom-semipink": "#FFC0CB"
+        "custom-semipink": "#FFEFEF"
       },
       textColor: {
         "custom-orange": "#FE4C00"
