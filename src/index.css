@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.slider-item {
+    @apply w-[20%] !important;
+}

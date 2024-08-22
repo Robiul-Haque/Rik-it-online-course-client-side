@@ -6,9 +6,33 @@ import { IoMenu } from "react-icons/io5";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { IoMdBook } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
+import Button from '../components/Button';
+import MenuList from '../components/MenuList';
 
 const Navbar = () => {
     const [toogle, setToogle] = useState(true);
+    const menuItems = [
+        {
+            label: 'Home',
+            path: '/',
+        },
+        {
+            label: 'About',
+            path: '/about',
+        },
+        {
+            label: 'SUCCESS STORY',
+            path: '/success-story',
+        },
+        {
+            label: 'FREELANCING',
+            path: '/freelancing',
+        },
+        {
+            label: 'CONTACT',
+            path: '/contact',
+        },
+    ]
 
     return (
         <>
@@ -30,28 +54,8 @@ const Navbar = () => {
             </section>
             <nav className='flex justify-between items-center px-4 py-2 md:px-20 md:py-3'>
                 <img src={header_logo} alt="Header-logo" className='w-4/12 md:w-2/12' />
-                <ul className='md:flex items-center flex-col hidden md:flex-row md:gap-x-10 font-semibold px-2'>
-                    <li>
-                        <a href="/">HOME</a>
-                    </li>
-                    <li>
-                        <a href="/about">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="/success-story">SUCCESS STORY</a>
-                    </li>
-                    <li>
-                        <a href="/freelancing">FREELANCING</a>
-                    </li>
-                    <li>
-                        <a href="/contact">CONTACT</a>
-                    </li>
-                </ul>
-                <button className='md:flex justify-center items-center gap-x-2 bg-custom-orange text-white hidden font-medium w-52 h-12 rounded-lg px-2'>
-                    <IoMdBook />
-                    COURSE DETAILS
-                    <IoMdArrowDropdown className='size-5' />
-                </button>
+                <MenuList menuItems={menuItems} className={'md:flex items-center flex-col hidden md:flex-row md:gap-x-10 font-semibold px-2'} />
+                <Button leftIcon={<IoMdBook />} title={'COURSE DETAILS'} rightIcon={<IoMdArrowDropdown className='size-5' />} className={"md:flex justify-center items-center gap-x-2 bg-custom-orange text-white hidden font-medium w-52 h-10 rounded-lg px-2"} />
                 {/* responsive menu */}
                 <div className='block md:hidden'>
                     {
@@ -64,34 +68,14 @@ const Navbar = () => {
                                 <i onClick={() => setToogle(true)}>
                                     <IoCloseCircleOutline className='size-10' />
                                 </i>
-                                <ul className='flex items-center flex-col gap-y-3 font-semibold p-5 rounded-lg absolute top-[150px] right-[32%] bg-slate-200'>
-                                    <li>
-                                        <a href="/">HOME</a>
-                                    </li>
-                                    <li>
-                                        <a href="/about">ABOUT</a>
-                                    </li>
-                                    <li>
-                                        <a href="/success-story">SUCCESS STORY</a>
-                                    </li>
-                                    <li>
-                                        <a href="/freelancing">FREELANCING</a>
-                                    </li>
-                                    <li>
-                                        <a href="/contact">CONTACT</a>
-                                    </li>
-                                </ul>
+                                <MenuList menuItems={menuItems} className={'flex items-center flex-col gap-y-3 font-semibold p-5 rounded-lg absolute top-[150px] right-[32%] bg-slate-50'} />
                             </>
                     }
                 </div>
-                <button className='flex items-center gap-x-1 bg-custom-orange text-white md:hidden font-medium p-2 text-xs rounded-lg'>
-                    <IoMdBook className='size-4' />
-                    COURSE DETAILS
-                    <IoMdArrowDropdown className='size-5' />
-                </button>
+                <Button leftIcon={<IoMdBook />} title={'COURSE DETAILS'} rightIcon={<IoMdArrowDropdown className='size-5' />} className={"flex items-center gap-x-1 bg-custom-orange text-white md:hidden font-medium p-2 text-xs rounded-lg"} />
             </nav>
         </>
     )
 }
 
-export default Navbar
+export default Navbar;
