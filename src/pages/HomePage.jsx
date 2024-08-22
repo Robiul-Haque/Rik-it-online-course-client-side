@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../shared/Navbar';
 import HeroSection from '../components/HeroSection';
 import PopularCoursesSection from '../components/PopularCoursesSection';
+import DetailSection from '../components/DetailSection';
 
 
 const HomePage = () => {
@@ -12,6 +13,7 @@ const HomePage = () => {
                 <HeroSection />
             </header>
             <PopularCoursesSection/>
+            <DetailSection />
         </>
     )
 }
