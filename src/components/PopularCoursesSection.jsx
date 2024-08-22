@@ -18,7 +18,7 @@ const PopularCoursesSection = () => {
                 <h4 onClick={() => setToggle('graphics-design')} className={toggle === 'graphics-design' ? 'md:text-xl md:font-semibold cursor-pointer text-custom-orange text-center' : 'md:text-xl md:font-semibold cursor-pointer text-center'}>Graphic Design</h4>
                 <h4 onClick={() => setToggle('web-development')} className={toggle === 'web-development' ? 'md:text-xl md:font-semibold cursor-pointer text-custom-orange text-center' : 'md:text-xl md:font-semibold cursor-pointer text-center'}>Web & Software</h4>
                 <h4 onClick={() => setToggle('english-language')} className={toggle === 'english-language' ? 'md:text-xl md:font-semibold cursor-pointer text-custom-orange text-center' : 'md:text-xl md:font-semibold cursor-pointer text-center'}>English Language</h4>
-                <h4 onClick={() => setToggle('digital-marketing')} className={toggle === 'digital-marketing' ? 'md:text-xl md:font-semibold cursor-pointer text-custom-orange text-center' : 'md:text-xl md:font-semiboldcursor-pointer text-center'}>Digital Marketing</h4>
+                <h4 onClick={() => setToggle('digital-marketing')} className={toggle === 'digital-marketing' ? 'md:text-xl md:font-semibold cursor-pointer text-custom-orange text-center' : 'md:text-xl md:font-semibold cursor-pointer text-center'}>Digital Marketing</h4>
             </div>
             <hr className='my-5 md:w-[70%] mx-auto border border-[#FE4C00]' />
             {
