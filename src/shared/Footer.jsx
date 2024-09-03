@@ -46,7 +46,7 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-            <div className='flex justify-start items-center gap-x-6 w-[80%] mx-auto mt-5 pl-6 md:pl-0'>
+            <div className='flex justify-start items-center gap-x-6 w-[80%] mx-auto mt-5 pl-6 md:pl-6'>
                 <a href="https://www.facebook.com/groups/156371947285397/?ref=share" target="_blank" rel="noopener noreferrer"><i><FaFacebook className='size-5 cursor-pointer' /></i></a>
                 <a href="https://wa.me/+8801928111128" target="_blank" rel="noopener noreferrer"><i><IoLogoWhatsapp className='size-6 cursor-pointer' /></i></a>
                 <button className='border  px-4 py-2 rounded-lg bg-custom-semipink'><a href="https://eshoptobd.com/" target='_blank'>Shop Now</a></button>
