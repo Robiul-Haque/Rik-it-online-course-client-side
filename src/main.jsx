@@ -2,9 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import MainLayout from './layout/MainLayout';
-import HomePage from './pages/HomePage';
-// import router from './route/Route'
+import MainLayout from './layout/Main';
+import Home from './pages/Home';
+import Course from './pages/Course';
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomePage />
+        element: <Home />
+      },
+      {
+        path: "/course",
+        element: <Course />
       },
       {
         path: "/about",

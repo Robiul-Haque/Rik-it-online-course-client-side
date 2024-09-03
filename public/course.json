@@ -1,0 +1,58 @@
+[
+    {
+        "title": "Data Entry",
+        "image": "https://rik-offlinecourse.com/wp-content/uploads/2023/12/data-entry-online.png",
+        "price": 3500,
+        "rating": 3,
+        "link": "https://rik-offlinecourse.com/courses/data-entry-online/"
+    },
+    {
+        "title": "Microsoft Office",
+        "image": "https://rik-offlinecourse.com/wp-content/uploads/2023/11/online-word.png",
+        "price": 3000,
+        "rating": 4,
+        "link": "https://rik-offlinecourse.com/courses/microsoft-office-online/"
+    },
+    {
+        "title": "Full Stack Web Development",
+        "image": "https://rik-offlinecourse.com/wp-content/uploads/2023/12/web-development-online.png",
+        "price": 5000,
+        "rating": 5,
+        "link": "https://rik-offlinecourse.com/courses/full-stack-web-development-online/"
+    },
+    {
+        "title": "Graphics Design",
+        "image": "https://rik-offlinecourse.com/wp-content/uploads/2024/08/tample-graphics.png",
+        "price": 3000,
+        "rating": 4,
+        "link": "https://rik-offlinecourse.com/courses/graphics-design-online/"
+    },
+    {
+        "title": "UI/UX Design",
+        "image": "https://rik-offlinecourse.com/wp-content/uploads/2024/08/tample-ui-ux.png",
+        "price": 5000,
+        "rating": 4,
+        "link": "https://rik-offlinecourse.com/courses/ui-ux-design/"
+    },
+    {
+        "title": "Talimun Quran",
+        "image": "https://rik-offlinecourse.com/wp-content/uploads/2023/11/talimun-quran.png",
+        "price": 3000,
+        "rating": 5,
+        "link": "https://rik-offlinecourse.com/courses/talimun-quran/"
+    },
+    {
+        "title": "সোশ্যাল মিডিয়া মার্কেটিং",
+        "image": "https://rik-offlinecourse.com/wp-content/uploads/2023/11/socail-media-online.png",
+        "price": 4500,
+        "rating": 3,
+        "link": "https://rik-offlinecourse.com/courses/সোশ্যাল-মিডিয়া-মার্কেট-2/"
+    },
+    {
+        "title": "ডিজিটাল মার্কেটিং",
+        "image": "https://rik-offlinecourse.com/wp-content/uploads/2023/12/digital-marketing-online.png",
+        "price": 5000,
+        "rating": 5,
+        "link": "https://rik-offlinecourse.com/courses/digital-marketing-online/"
+    }
+]

@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Button = ({ leftIcon, title, rightIcon, className }) => {
+const Button = ({leftIcon, title, className }) => {
     return (
         <button className={className}>
             {leftIcon}
             {title}
-            {rightIcon}
         </button>
     )
 }

@@ -8,7 +8,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 const Footer = () => {
     return (
         <section className='bg-custom-orange pt-10 pb-3'>
-            <div className='flex justify-between md:flex-row flex-col w-[80%] mx-auto'>
+            <div className='flex justify-between flex-col md:flex-row w-[80%] mx-auto pl-6 mx:pl-0'>
                 <div>
                     <h2 className='text-2xl font-semibold text-white mb-3'>Address</h2>
                     <p className='w-[30%]'>Sriangan Market,East side next to Maingate (2nd floor)Room No-3, Gowalchamot Faridpur</p>
@@ -46,7 +46,7 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-            <div className='flex justify-start items-center gap-x-6 w-[80%] mx-auto mt-5'>
+            <div className='flex justify-start items-center gap-x-6 w-[80%] mx-auto mt-5 pl-6 md:pl-0'>
                 <a href="https://www.facebook.com/groups/156371947285397/?ref=share" target="_blank" rel="noopener noreferrer"><i><FaFacebook className='size-5 cursor-pointer' /></i></a>
                 <a href="https://wa.me/+8801928111128" target="_blank" rel="noopener noreferrer"><i><IoLogoWhatsapp className='size-6 cursor-pointer' /></i></a>
                 <button className='border  px-4 py-2 rounded-lg bg-custom-semipink'><a href="https://eshoptobd.com/" target='_blank'>Shop Now</a></button>

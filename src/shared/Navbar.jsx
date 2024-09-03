@@ -11,54 +11,74 @@ import MenuList from '../components/MenuList';
 
 const Navbar = () => {
     const [toogle, setToogle] = useState(true);
+    const [language, setLanguage] = useState("en");
     const menuItems = [
         {
-            label: 'Home',
+            en: 'Home',
+            bn: 'বাড়ি',
             path: '/',
         },
         {
-            label: 'Rik offline',
+            en: 'Course',
+            bn: 'কোর্স',
+            path: '/course',
+        },
+        {
+            en: 'Rik offline',
+            bn: 'রিক অফলাইন',
             path: 'https://rik-offlinecourse.com/',
         },
         {
-            label: 'Blog',
+            en: 'Blog',
+            bn: 'ব্লগ',
             path: 'https://rik-offlinecourse.com/blog/',
         },
         {
-            label: 'About',
+            en: 'About',
+            bn: 'সম্পর্কে',
             path: 'https://rik-offlinecourse.com/about/',
         },
         {
-            label: 'Contact',
+            en: 'Contact',
+            bn: 'যোগাযোগ',
             path: 'https://rik-offlinecourse.com/contact/',
         },
         {
-            label: 'SUCCESS STORY',
+            en: 'SUCCESS STORY',
+            bn: 'সাফল্যের গল্প',
             path: 'https://rik-offlinecourse.com/success-story/',
         },
     ]
+    const toggleLanguage = () => {
+        setLanguage((prevLanguage) => (prevLanguage === "en" ? "bn" : "en"));
+    };
 
     return (
         <>
             <section className='bg-[#FE4C00] flex justify-between px-4 md:px-20 py-4'>
                 <div className='flex flex-col md:flex-row md:gap-10'>
-                    <i className='flex items-center'>
+                    <i onClick={() => window.open('mailto:help@rikitinstitute.com')} className='flex items-center text-white font-bold not-italic cursor-pointer'>
                         <MdEmail className='mx-1.5' />
                         help@rikitinstitute.com
                     </i>
                 </div>
-                <select className='rounded-md cursor-pointer outline-none p-1' name="language">
-                    <option value="English">English</option>
-                    <option value="bangla">Bangla</option>
-                </select>
+                <section className="switch">
+                    <input id="language-toggle" className="check-toggle check-toggle-round-flat" type="checkbox" onChange={toggleLanguage} />
+                    <label htmlFor="language-toggle"></label>
+                    <span className="on">EN</span>
+                    <span className="off">BN</span>
+                </section>
             </section>
             <nav className='flex justify-between items-center px-4 py-2 md:px-20 md:py-3'>
                 <img src={header_logo} alt="Header-logo" className='w-4/12 md:w-2/12' />
                 {/* large device menu */}
-                <MenuList menuItems={menuItems} className={'md:flex items-center flex-col hidden md:flex-row md:gap-x-10 font-semibold px-2'} />
-                <Button leftIcon={<IoMdBook />} title={'Snior ID'} rightIcon={<IoMdArrowDropdown className='size-5' />} className={"md:flex justify-center items-center gap-x-2 bg-custom-orange text-white hidden font-medium w-40 h-10 rounded-lg px-2"} />
+                <MenuList menuItems={menuItems} language={language} listStyle={'hover:text-[#FE4C00] transition-all'} className={'lg:flex items-center flex-col hidden lg:flex-row md:gap-x-8 font-semibold px-2'} />
+                <div className='hidden md:flex gap-x-5'>
+                    <Button title={'Admin Login'} className={"bg-custom-orange text-white font-medium w-40 h-12 rounded-xl px-3"} />
+                    <Button title={'Sub-Admin Login'} className={"bg-custom-orange text-white font-medium w-40 h-12 rounded-xl px-3"} />
+                </div>
                 {/* responsive menu */}
-                <div className='block md:hidden'>
+                <div className='block lg:hidden'>
                     {
                         toogle ?
                             <i onClick={() => setToogle(false)}>
@@ -73,7 +93,6 @@ const Navbar = () => {
                             </>
                     }
                 </div>
-                {/* <Button leftIcon={<IoMdBook />} title={'COURSE DETAILS'} rightIcon={<IoMdArrowDropdown className='size-5' />} className={"flex items-center gap-x-1 bg-custom-orange text-white md:hidden font-medium p-2 text-xs rounded-lg"} /> */}
                 <Button leftIcon={<IoMdBook />} title={'Snior ID'} rightIcon={<IoMdArrowDropdown className='size-5' />} className={"md:hidden flex justify-center items-center gap-x-2 bg-custom-orange text-white font-medium w-36 h-10 rounded-lg px-2"} />
             </nav>
         </>

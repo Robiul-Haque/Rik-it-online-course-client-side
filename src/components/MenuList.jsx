@@ -1,13 +1,14 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const MenuList = ({ menuItems, className }) => {
+const MenuList = ({ className, menuItems, listStyle, language }) => {
     return (
         <ul className={className}>
             {
                 menuItems?.map(item => {
                     return (
-                        <li key={item.label}>
-                            <a href={item.path}>{item.label}</a>
+                        <li key={item?.label} className={listStyle}>
+                            <NavLink to={item?.path} >{language === 'en' ? item?.en : item?.bn}</NavLink>
                         </li>
                     )
                 })

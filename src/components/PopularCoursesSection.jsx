@@ -1,41 +1,42 @@
-import React, { useState } from 'react';
-import AllCourse from './AllCourse';
-import EnglishCourse from './EnglishCourse';
-import DigitalMarketingCourse from './DigitalMarketingCourse';
-import WebDevelopemntCourse from './WebDevelopemntCourse';
-import GraphicsDesignCourse from './GraphicsDesignCourse';
+import React, { useEffect, useState } from 'react';
+import Rating from 'react-rating';
+import { PiStarThin } from "react-icons/pi";
+import { PiStarFill } from "react-icons/pi";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const PopularCoursesSection = () => {
-    const [toggle, setToggle] = useState('all-course');
-    console.log(toggle);
+    const [courses, setCourses] = useState([]);
+
+    useEffect(() => {
+        fetch("course.json")
+            .then(res => res.json())
+            .then(data => setCourses(data))
+    }, [courses]);
 
     return (
-        <section className='bg-custom-semipink pt-14'>
-            <h2 className='text-custom-orange text-center text-4xl font-semibold'>Popular Courses</h2>
-            <p className='text-center w-[80%] mx-auto mt-10 md:w-[60%]'>We have designed our courses with the most demanding professional skills. The knowledge, experience, and expertise gained through the program will ensure your desired job in the global market. From the list below you can enroll to any online or offline courses at any time.</p>
-            <div className='flex md:justify-between gap-x-1 md:gap-x-0 md:w-[66%] mx-auto mt-6 md:px-0 px-1'>
-                <h4 onClick={() => setToggle('all-course')} className={toggle === 'all-course' ? 'md:text-xl md:font-semibold cursor-pointer text-custom-orange text-center' : 'md:text-xl md:font-semibold cursor-pointer text-center'}>All Courses</h4>
-                <h4 onClick={() => setToggle('graphics-design')} className={toggle === 'graphics-design' ? 'md:text-xl md:font-semibold cursor-pointer text-custom-orange text-center' : 'md:text-xl md:font-semibold cursor-pointer text-center'}>Graphic Design</h4>
-                <h4 onClick={() => setToggle('web-development')} className={toggle === 'web-development' ? 'md:text-xl md:font-semibold cursor-pointer text-custom-orange text-center' : 'md:text-xl md:font-semibold cursor-pointer text-center'}>Web & Software</h4>
-                <h4 onClick={() => setToggle('english-language')} className={toggle === 'english-language' ? 'md:text-xl md:font-semibold cursor-pointer text-custom-orange text-center' : 'md:text-xl md:font-semibold cursor-pointer text-center'}>English Language</h4>
-                <h4 onClick={() => setToggle('digital-marketing')} className={toggle === 'digital-marketing' ? 'md:text-xl md:font-semibold cursor-pointer text-custom-orange text-center' : 'md:text-xl md:font-semibold cursor-pointer text-center'}>Digital Marketing</h4>
+        <section className='bg-custom-semipink md:px-[14%] pt-24 pb-16 px-6'>
+            <h2 className='text-3xl font-bold text-center mb-4'>Our popular online courses</h2>
+            <p className='text-center text-lg mb-14'>A best and cheapest way of getting know learning to make a better tomorrow</p>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-6 gap-y-12 px-6'>
+                {
+                    courses && courses.map(course => (
+                        <div key={course?.title} className='md:w-72 rounded-xl border-2 border-[#FE4C00] hover:-translate-y-1.5 hover:transition-transform hover:shadow-xl'>
+                            <LazyLoadImage className='w-full rounded-t-xl' src={course?.image} alt={course?.title} effect='blur' />
+                            <div className='pt-4 mb-2 px-2 text-center'>
+                                <h2 className='font-semibold'>{course?.title}</h2>
+                                <div className='flex justify-around items-center'>
+                                    <div className='my-5'>
+                                        <Rating initialRating={course?.rating} emptySymbol={<PiStarThin />} fullSymbol={<PiStarFill />} readonly className='text-[#FE4C00]' />
+                                    </div>
+                                    <p>{course?.price} BDT</p>
+                                </div>
+                                <a href={course?.link}><button className='bg-custom-orange hover:bg-[#fe4c00bb] text-white border border-[#FE4C00] w-full px-4 py-1.5 rounded-lg text-xs font-semibold'>See More</button></a>
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
-            <hr className='my-5 md:w-[70%] mx-auto border border-[#FE4C00]' />
-            {
-                toggle === 'all-course' && <AllCourse />
-            }
-            {
-                toggle === 'graphics-design' && <GraphicsDesignCourse />
-            }
-            {
-                toggle === 'web-development' && <WebDevelopemntCourse />
-            }
-            {
-                toggle === 'english-language' && <EnglishCourse />
-            }
-            {
-                toggle === 'digital-marketing' && <DigitalMarketingCourse />
-            }
         </section>
     )
 }

@@ -7,7 +7,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import digital_marketing from '../assets/digital-markting-icon.png';
 import graphic_design from '../assets/graphic-design-icon.png';
 import web_development from '../assets/web-development-icon.png';
@@ -18,8 +20,8 @@ import { RiLoginBoxLine } from "react-icons/ri";
 
 const HeroSection = () => {
     return (
-        <section>
-            <div className='flex items-center md:flex-row flex-col-reverse gap-x-12 md:w-[80%] mx-auto md:mt-12 mt-6'>
+        <section className='bg-custom-semipink'>
+            <div className='flex items-center md:flex-row flex-col-reverse gap-x-12 md:w-[80%] mx-auto md:pt-12 pt-6'>
                 <div className='w-[90%] md:w-[40%]'>
                     <h3 className='text-3xl font-semibold md:mt-0 mt-8'>Unleash Your Potential</h3>
                     <h1 className='md:text-4xl text-5xl font-bold my-5'>Become an IT Pro & Rule the <span className='text-custom-orange'>Digital World.</span> Learn, Earn, and Succeed in Career!</h1>
@@ -70,10 +72,10 @@ const HeroSection = () => {
                     },
                 }}
                 modules={[Autoplay]}
-                className="mySwiper mt-10 mx-auto md:w-[80%] w-full"
+                className="mySwiper mt-20 mx-auto md:w-[80%] w-full"
             >
                 <SwiperSlide className='bg-white border border-[#FE4C00] rounded-3xl py-6 slider-item'>
-                    <img className='w-12 mx-auto' src={digital_marketing} alt="digital marketing" />
+                    <LazyLoadImage className='w-12 mx-auto' src={digital_marketing} alt="digital marketing" effect='blur' />
                     <div className='text-center'>
                         <a href="https://rik-offlinecourse.com/service/">
                             <h3>Digital</h3>
@@ -82,7 +84,7 @@ const HeroSection = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='bg-white border border-[#FE4C00] rounded-3xl py-6 slider-item'>
-                    <img className='w-10 mx-auto' src={graphic_design} alt="graphic_design" />
+                    <LazyLoadImage className='w-10 mx-auto' src={graphic_design} alt="graphic_design" effect='blur' />
                     <div className='text-center'>
                         <a href="https://rik-offlinecourse.com/service/">
                             <h3>Graphic &</h3>
@@ -91,7 +93,7 @@ const HeroSection = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='bg-white border border-[#FE4C00] rounded-3xl py-6 slider-item'>
-                    <img className='w-10 mx-auto' src={web_development} alt="web_development" />
+                    <LazyLoadImage className='w-10 mx-auto' src={web_development} alt="web_developmen effect='blur't" />
                     <div className='text-center'>
                         <a href="https://rik-offlinecourse.com/service/">
                             <h3>Web &</h3>
@@ -100,7 +102,7 @@ const HeroSection = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='bg-white border border-[#FE4C00] rounded-3xl py-6 slider-item'>
-                    <img className='w-10 mx-auto' src={english_anguage} alt="english_anguaget" />
+                    <LazyLoadImage className='w-10 mx-auto' src={english_anguage} alt="english_anguag effect='blur'et" />
                     <div className='text-center'>
                         <a href="https://rik-offlinecourse.com/service/">
                             <h3>Englis</h3>
@@ -109,7 +111,7 @@ const HeroSection = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='bg-white border border-[#FE4C00] rounded-3xl py-6 slider-item'>
-                    <img className='w-10 mx-auto' src={microsoft_office} alt="microsoft_office" />
+                    <LazyLoadImage className='w-10 mx-auto' src={microsoft_office} alt="microsoft_off effect='blur'ice" />
                     <div className='text-center'>
                         <a href="https://rik-offlinecourse.com/service/">
                             <h3>Microsoft</h3>
