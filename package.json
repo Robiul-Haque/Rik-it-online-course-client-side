@@ -18,7 +18,7 @@
     "react-lazy-load-image-component": "^1.6.2",
     "react-loading-skeleton": "^3.4.0",
     "react-rating": "^2.0.5",
-    "react-router-dom": "^6.26.0",
+    "react-router-dom": "^6.30.3",
     "react-scroll-to-top": "^3.0.0",
     "sort-by": "^1.2.0",
     "swiper": "^11.1.10"
